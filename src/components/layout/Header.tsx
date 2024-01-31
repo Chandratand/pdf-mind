@@ -2,6 +2,7 @@ import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { AccountDropdown } from './AccountDropdown';
 import { MobileSidebar } from './MobileSidebar';
+import ThemeToggle from './ThemeToggle';
 
 export default function Header() {
   return (
@@ -18,6 +19,7 @@ export default function Header() {
 
         <div className="flex items-center gap-2">
           <AccountDropdown />
+          <ThemeToggle />
         </div>
       </nav>
     </div>

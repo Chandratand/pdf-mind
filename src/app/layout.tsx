@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 import '../styles/globals.css';
 import { cn } from '@/lib/utils';
+import Providers from '@/components/providers';
+import { Toaster } from 'sonner';
 
 const montserrat = Montserrat({ subsets: ['latin'] });
 
@@ -17,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(montserrat.className, 'relative', { 'debug-screens': process.env.NODE_ENV === 'development' })}>{children}</body>
+      <body className={cn(montserrat.className, 'relative', { 'debug-screens': process.env.NODE_ENV === 'development' })}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
