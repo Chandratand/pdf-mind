@@ -1,6 +1,11 @@
+'use client';
+import { Button } from '@/components/ui/button';
+import { toast } from 'sonner';
+
 const DashboardPage = () => {
   return (
     <div>
+      <Button onClick={() => toast.success('Sdasa')}>Toast</Button>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, itaque, molestias ipsam cupiditate rem, at veritatis sit rerum sapiente accusantium id? Debitis iste quo repudiandae, neque nemo praesentium harum pariatur quas
         molestiae error laudantium. Labore itaque in adipisci expedita cum, asperiores corporis eos odio non quod saepe, vel blanditiis quaerat quasi quo iure illo illum obcaecati possimus incidunt, praesentium et repellendus nemo placeat?
