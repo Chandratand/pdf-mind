@@ -1,9 +1,9 @@
 'use client';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { MenuIcon } from 'lucide-react';
+import { ArrowRight, MenuIcon } from 'lucide-react';
+import Link from 'next/link';
 import { useState } from 'react';
-import { Navigation } from './Navigation';
-import { NAVIGATION_ITEMS } from '@/constants/navigation';
+import { buttonVariants } from '../ui/button';
 
 export function MobileSidebar() {
   const [open, setOpen] = useState(false);
@@ -13,12 +13,19 @@ export function MobileSidebar() {
         <SheetTrigger asChild>
           <MenuIcon className="hover:cursor-pointer" />
         </SheetTrigger>
-        <SheetContent side="left" className="!px-0">
+        <SheetContent side="right" className="!px-0">
           <div className="space-y-4 py-4">
             <div className="px-3 py-2">
-              <h2 className="mb-2 px-4 text-lg font-semibold tracking-tight">Overview</h2>
-              <div className="space-y-1">
-                <Navigation items={NAVIGATION_ITEMS} setOpen={setOpen} />
+              <div className="flex flex-col gap-4">
+                <Link href={'/sign-up'} className="text-sm font-semibold">
+                  Pricing
+                </Link>
+                <Link href={'/sign-up'} className="text-sm font-semibold">
+                  Sign In
+                </Link>
+                <Link href={'/sign-in'} className={buttonVariants({ size: 'sm', variant: 'muted' })}>
+                  Get Started <ArrowRight className="ml-1 size-4" />
+                </Link>
               </div>
             </div>
           </div>

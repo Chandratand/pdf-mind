@@ -4,6 +4,7 @@ import '../styles/globals.css';
 import { cn } from '@/lib/utils';
 import Providers from '@/components/providers';
 import { Toaster } from 'sonner';
+import Header from '@/components/layout/Header';
 
 const montserrat = Montserrat({ subsets: ['latin'] });
 
@@ -20,7 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(montserrat.className, 'relative', { 'debug-screens': process.env.NODE_ENV === 'development' })}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <Header />
+          {children}
+        </Providers>
       </body>
     </html>
   );
