@@ -19,11 +19,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={cn(montserrat.className, 'relative', { 'debug-screens': process.env.NODE_ENV === 'development' })}>
         <Providers>
           <Header />
-          {children}
+          <div className="mt-14">{children}</div>
         </Providers>
       </body>
     </html>

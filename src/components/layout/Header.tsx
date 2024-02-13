@@ -22,13 +22,13 @@ export default function Header() {
         <div className="hidden items-center gap-4 lg:flex">
           {/* <AccountDropdown /> */}
           {/* <ThemeToggle /> */}
-          <Link href={'/sign-up'} className="text-sm font-semibold">
+          <Link href={'/sign-in'} className="text-sm font-semibold">
             Pricing
           </Link>
-          <Link href={'/sign-up'} className="text-sm font-semibold">
+          <Link href={'/sign-in'} className="text-sm font-semibold">
             Sign In
           </Link>
-          <Link href={'/sign-in'} className={buttonVariants({ size: 'sm', variant: 'muted' })}>
+          <Link href={'/sign-up'} className={buttonVariants({ size: 'sm', variant: 'secondary' })}>
             Get Started <ArrowRight className="ml-1 size-4" />
           </Link>
         </div>

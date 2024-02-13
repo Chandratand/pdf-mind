@@ -4,7 +4,7 @@ import Dummy from '../../public/dummy.jpg';
 
 const Home = () => {
   return (
-    <div className="relative mt-14">
+    <div className="relative">
       <section className="container relative flex flex-col py-10 md:py-12 lg:flex-row">
         {/* Text Part */}
         <div className="flex flex-1 flex-col justify-center space-y-4 text-center lg:pr-4 lg:text-start">
